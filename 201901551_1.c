@@ -4,25 +4,31 @@
 
 const int size = 7;
 
+// 버블 정렬 함수 정의
 void bubbleSort(int arr[], int n) {
     int i, j;
-    int swapped;
+    int swapped; // 교환이 이루어졌는지 여부를 나타내는 변수
 
     printf("=========== 버블 정렬 과정 ===========\n");
 
     for (i = 0; i < n-1; i++) {
-        swapped = 0;
+        swapped = 0; // 초기에는 아직 교환이 이루어지지 않았음을 표시
+
         for (j = 0; j < n-i-1; j++) {
             if (arr[j] > arr[j+1]) {
+                // 인접한 두 원소를 비교하여 필요한 경우 교환
                 int temp = arr[j];
                 arr[j] = arr[j+1];
                 arr[j+1] = temp;
-                swapped = 1;
+                swapped = 1; // 교환이 이루어졌음을 표시
             }
+
+            // 현재 패스에서의 배열 상태를 출력
             printf("%d ", arr[j]);
         }
         printf("\n");
 
+        // 만약 현재 패스에서 교환이 전혀 이루어지지 않았다면 이미 정렬된 상태이므로 루프 종료
         if (swapped == 0)
             break;
     }
@@ -43,8 +49,10 @@ int main() {
     }
     printf("\n");
 
+    // 버블 정렬 수행
     bubbleSort(arr, size);
 
+    // 정렬된 배열 출력
     printf("정렬된 배열: ");
     for (int i=0; i < size; i++)
         printf("%d ", arr[i]);
