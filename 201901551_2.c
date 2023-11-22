@@ -38,7 +38,10 @@ void selectionSort(int arr[]) {
 int main() {
     int arr[size];
 
-    // 배열 초기화
+    // 난수 초기화
+    srand(time(NULL));
+    
+    // 무작위로 배열 생성
     printf("기존 배열: ");
     for (int i = 0; i < size; i++) {
         arr[i] = rand() % 100; // 0부터 99까지의 난수 생성
