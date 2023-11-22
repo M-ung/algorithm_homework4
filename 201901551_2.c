@@ -2,16 +2,16 @@
 #include <stdlib.h>
 #include <time.h>
 
-const int size = 7;
+const int size = 7; // 배열 크기
 
-// 선택 정렬 함수 정의
-void selectionSort(int arr[], int n) {
+// 선택 정렬 함수
+void selectionSort(int arr[]) {
     int i, j, maxIndex;
 
     printf("=========== 선택 정렬 과정 ===========\n");
 
     // 배열을 끝에서부터 시작하여 정렬
-    for (i = n-1; i > 0; i--) {
+    for (i = size-1; i > 0; i--) {
         maxIndex = i; // 최댓값을 저장할 인덱스 초기화
 
         // 최댓값을 찾는 과정
@@ -20,7 +20,7 @@ void selectionSort(int arr[], int n) {
                 maxIndex = j; // 현재까지의 최댓값보다 큰 값을 찾으면 최댓값 인덱스 갱신
             }
         }
-        printf("최대값: %d\n", arr[maxIndex]);
+        printf("최댓값: %d\n", arr[maxIndex]);
 
         // 최댓값과 현재 위치의 원소를 교환
         int temp = arr[i];
@@ -46,8 +46,8 @@ int main() {
     }
     printf("\n");
 
-    // 선택 정렬 수행
-    selectionSort(arr, size);
+    // 선택 정렬 함수 호출
+    selectionSort(arr);
 
     // 정렬된 배열 출력
     printf("정렬된 배열: ");

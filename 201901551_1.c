@@ -2,19 +2,19 @@
 #include <stdlib.h>
 #include <time.h>
 
-const int size = 7;
+const int size = 7; // 배열 크기
 
-// 버블 정렬 함수 정의
-void bubbleSort(int arr[], int n) {
+// 버블 정렬 함수
+void bubbleSort(int arr[]) {
     int i, j;
     int swapped; // 교환이 이루어졌는지 여부를 나타내는 변수
 
     printf("=========== 버블 정렬 과정 ===========\n");
 
-    for (i = 0; i < n-1; i++) {
+    for (i = 0; i < size-1; i++) {
         swapped = 0; // 초기에는 아직 교환이 이루어지지 않았음을 표시
 
-        for (j = 0; j < n-i-1; j++) {
+        for (j = 0; j < size-i-1; j++) {
             if (arr[j] > arr[j+1]) {
                 // 인접한 두 원소를 비교하여 필요한 경우 교환
                 int temp = arr[j];
@@ -49,8 +49,8 @@ int main() {
     }
     printf("\n");
 
-    // 버블 정렬 수행
-    bubbleSort(arr, size);
+    // 버블 정렬 함수 호출
+    bubbleSort(arr);
 
     // 정렬된 배열 출력
     printf("정렬된 배열: ");
