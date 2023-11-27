@@ -34,7 +34,7 @@ void selectionSort(int arr[]) {
             }
         }
 
-        // 최댓값과 현재 위치의 원소를 교환
+        // 최댓값을 현재 패스에서의 마지막 원소와 교환한다.
         int temp = arr[i];
         arr[i] = arr[maxIndex];
         arr[maxIndex] = temp;
