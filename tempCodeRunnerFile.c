@@ -1,3 +1,2 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+
+    printf("=========== 선택 정렬 과정 ===========\n");
