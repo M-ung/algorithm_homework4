@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-const int size = 7; // 배열 크기
-int arr[size]; // 배열
+#define SIZE 7 // 배열 크기
+int arr[SIZE]; // 배열
 
 // 랜덤 배열 생성 함수
 void randomArr(int arr[]) {
@@ -12,7 +12,7 @@ void randomArr(int arr[]) {
 
     // 무작위로 배열 생성
     printf("기존 배열: ");
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < SIZE; i++) {
         arr[i] = rand() % 100; // 0부터 99까지의 난수 생성
         printf("%d ", arr[i]);
     }
@@ -24,7 +24,7 @@ void selectionSort(int arr[]) {
     int i, j, maxIndex;
 
     // 배열을 끝에서부터 시작하여 정렬
-    for (i = size-1; i > 0; i--) { // 큰 값을 찾아 큰 값을 오른쪽부터 채워 나가기 때문에 size-1부터 0까지 줄어나가면서 반복한다.
+    for (i = SIZE-1; i > 0; i--) { // 큰 값을 찾아 큰 값을 오른쪽부터 채워 나가기 때문에 size-1부터 0까지 줄어나가면서 반복한다.
         maxIndex = i; // 최댓값을 저장할 인덱스 초기화
 
         // 최댓값을 찾는 과정
@@ -45,7 +45,7 @@ void selectionSort(int arr[]) {
 void printArr(int arr[]) {
     // 정렬된 배열 출력
     printf("정렬된 배열: ");
-    for (int i=0; i < size; i++)
+    for (int i=0; i < SIZE; i++)
         printf("%d ", arr[i]);
 
     printf("\n");
